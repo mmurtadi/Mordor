@@ -7,6 +7,6 @@
 
 int main(void)
 {
-	printf("Good Morning!\nMy name is Mohamed\n");
+	printf("Good Morning!\nMy name is Mohamed\n"); //printing the text
 	return 0;
 }

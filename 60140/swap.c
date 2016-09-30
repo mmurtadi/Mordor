@@ -6,11 +6,13 @@
 int main(void)
 {
 	int num1, num2, temp=1;
-	printf("Please select a your first number: ");
+	printf("Please select a your first number: "); //user has a chance to select his first number
 	scanf("%d", &num1);
 
-	printf("Please select a your second number: ");
+	printf("Please select a your second number: "); //user has a chance to select his second number
 	scanf("%d", &num2);
+
+// number swap functionality, rotating numbers in order to not lose a variable
 
 	temp = num1;
 
