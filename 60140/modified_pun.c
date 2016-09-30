@@ -1,6 +1,6 @@
 // Name: Mohamed Murtadi
-//Purpose: CS Fall2016
-//Lab 1
+// Purpose: CS Fall2016
+// Lab 1
 
 
 #include <stdio.h>
