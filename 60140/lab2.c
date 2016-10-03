@@ -1,6 +1,6 @@
 // Name: Mohamed Murtadi
 // Purpose: CS 60-140 Fall2016
-// lab 3
+// lab 2
 #include <stdio.h>
 
 int main(void)
@@ -13,7 +13,7 @@ int main(void)
 
 	printf("%-15.8d\n",num1);
 
-	printf("%9f\n", num2);
+	printf("0%8f\n", num2); //am i cheating by doing this?
 	
 	printf("please enter the month you were born. (1-12): ");
 	scanf("%d", &mm);
