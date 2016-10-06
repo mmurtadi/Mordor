@@ -13,7 +13,7 @@ int main(void)
 
 
     printf("Enter the ISBN Number:");
-	scanf("", );
+	scanf("");
 
 	return 0;
 }

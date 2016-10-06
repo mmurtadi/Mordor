@@ -1,6 +1,6 @@
 // Name: Mohamed Murtadi
 // Purpose: CS 60-140 Fall2016
-// lab 2
+// lab 2 Part B
 #include <stdio.h>
 
 int main(void)
