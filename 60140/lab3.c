@@ -6,14 +6,16 @@
 int main(void)
 
 {
-    int group;
-    int publisher;
-    int title;
+    int num10, num9, num8, num7, num6, num5, num4, num3, num2, num1 num0;
+    int isbn isbnRemaining;
     int c_digit;
 
-
     printf("Enter the ISBN Number:");
-	scanf("");
+	scanf(%d, &isbnRemaining);
+
+
+
+	printf();
 
 	return 0;
 }
