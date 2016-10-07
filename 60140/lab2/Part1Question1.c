@@ -8,7 +8,7 @@ int main(void)
 {
 	// Part A Print unsigned integer 40000 left justified in a 15-digit field with 8 digits.
 	
-    int num1 = 40000;
+    unsigned int num1 = 40000;
     
     printf("%-15.8d\n",num1);
     
@@ -18,7 +18,7 @@ int main(void)
 	
     float num2 = 1.234;
 
-	printf("%09f\n", num2); 
+	printf("%09.3f\n", num2); 
 	
     
     // Part C Read a time of the form hh:mm:ss, storing the parts of the time in the integer variables hour, minute and second. Skip the colons (:) in the input stream. 

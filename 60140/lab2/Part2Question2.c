@@ -13,7 +13,7 @@ int main(void)
 	int dd_date;
 	int yy_date;
 
-		//Requests for user to enter in Item number, Unit Price and Purchase Date and then storing in their variables above
+		//Requests for user to enter in Item number, Unit Price and Purchase Date and then storing their variables above.
 
     printf("Enter the item number: \n"); 
 	scanf("%d", &i_number);
@@ -26,7 +26,7 @@ int main(void)
 
 		//print inputs formatted in a legible way as instructed in the lab question.
 
-    printf("Item\t\tUnit\t\tPurchase\n\t\tPrice\t\tDate\n-------\t\t---------\t-----------\n%d\t\t$%7.2f\t%d/%d/%d", i_number, unit_price, mm_date, dd_date, yy_date);
+    printf("Item\t\tUnit\t\tPurchase\n\t\tPrice\t\tDate\n-------\t\t---------\t-----------\n%d\t\t$%6.2f\t\t%d/%d/%d", i_number, unit_price, mm_date, dd_date, yy_date);
 
 	return 0;
 }
