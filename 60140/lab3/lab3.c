@@ -1,6 +1,7 @@
 // Name: Mohamed Murtadi
 // Purpose: CS 60-140 Fall2016
 // lab 3
+
 #include <stdio.h>
 
 int main(void)
@@ -8,7 +9,6 @@ int main(void)
 {
     int num1, num2, num3, num4, num5, num6, num7, num8, num9;
     int sum;
-    int catch;
     int checkDigit;
 
     printf("This programming is for checking for a missing Check Digit\nEnter the ISBN Number you want to check: \n");
@@ -19,9 +19,11 @@ int main(void)
 	checkDigit = 11-(sum%11);
 
 	if (checkDigit == 10)
-		printf("Check Digit: X");
+		printf("Check Digit: X\n");
+	else if (checkDigit == 11)
+		printf("Check digit: 0\n");
 	else
-		printf("Check Digit: %d", checkDigit);
+		printf("Check Digit: %d\n", checkDigit);
 		
 	return 0;
 }
