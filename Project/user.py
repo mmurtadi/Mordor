@@ -1,3 +1,9 @@
+# Author: Moe Murtadi
+# Fall 2016
+# Menu File, Movie list and tracking program
+
+
+
 from movie import Movie
 
 class User:
@@ -8,14 +14,14 @@ class User:
     def __repr__(self):
         return "<User {}>".format(self.name)
 
-    def add_movie(self, name, genre):
-        movie = Movie(name, genre, False)
+    def add_movie(self, name, mtype, genre):
+        movie = Movie(name, mtype, genre, False)
         self.movies.append(movie)
 
     def delete_movie(self, name):
         self.movies = list(filter(lambda movie: movie.name != name, self.movies))
 
-# Lambda looks through the "movie" object and only looks for movie.watched
+# self reminder: Lambda looks through the "movie" object and only looks for movie.watched
     # checks if true, if so it will add it to movies_watched
     def watched_movies(self):
         movies_watched = list(filter(lambda movie: movie.watched, self.movies))

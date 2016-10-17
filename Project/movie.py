@@ -1,7 +1,13 @@
+# Author: Moe Murtadi
+# Fall 2016
+# Menu File, Movie list and tracking program, currently changing to include media ie. video games.
+
+
 class Movie:
-    def __init__(self, name, genre, watched):
+    def __init__(self, name, mtype, genre, watched):
         self.name = name
-        self.genre = genre
+        self.mtype = mtype #any errors will most likely be do to change from movies to media/mtype
+        self.genre = genre 
         self.watched = watched
 
     def __repr__(self):
@@ -11,9 +17,10 @@ class Movie:
         return {
             'name': self.name,
             'genre': self.genre,
+            'media type': self.mtype
             'watched': self.watched
         }
-#Json Note, so if i change the property of the movies,
+#self reminder if i change the property of the movies,
     # I dont have to go elsewhere besides making the change here.
 
     @classmethod
