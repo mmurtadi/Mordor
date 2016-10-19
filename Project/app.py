@@ -22,8 +22,8 @@ def menu():
                        '\nEnter \'a\' if you would like to add media to the DB'
                        '\nEnter \'ls\' to list media'
                        '\nEnter \'w\' to mark media as watched/played'
-                       '\nEnter \'d to delete an item'
-                       '\nEnter \'l to see the list of watched/played media'
+                       '\nEnter \'d\' to delete an item'
+                       '\nEnter \'l\' to see the list of watched/played media'
                        '\nEnter \'s\' to save'
                        '\nEnter \'q\' quit'
                        '\n****************************************************'
@@ -31,11 +31,11 @@ def menu():
 
     while user_input!= 'q':
         if user_input == 'a':
-            movie_mtype = input('is this a movie or video game')
-              if movie_mtype == 'game':
-                movie_name = input('enter the game name: ')
-              else
-                movie_name = input('enter the movie : ')
+            movie_mtype = input('is this a movie or video game: ')
+            if movie_mtype == 'game':
+              movie_name = input('enter the game name: ')
+            else:
+              movie_name = input('enter the movie : ')
             movie_genre = input('enter the movie genre: ')
             user.add_movie(movie_name, movie_mtype, movie_genre)
         elif user_input == 'ls':

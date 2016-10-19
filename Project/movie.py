@@ -17,7 +17,7 @@ class Movie:
         return {
             'name': self.name,
             'genre': self.genre,
-            'media type': self.mtype
+            'media type': self.mtype,
             'watched': self.watched
         }
 #self reminder if i change the property of the movies,
