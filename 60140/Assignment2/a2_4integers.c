@@ -9,7 +9,8 @@ int main(void)
 {
 	int num1, num2, num3, num4;
 
-	int large = 0, small = 999999999999999;
+	int large = 0;
+	int small = 10000;
 
 	printf("Enter your 1st digit: ");
 	scanf("%d", &num1);
