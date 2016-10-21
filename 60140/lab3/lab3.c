@@ -11,12 +11,18 @@ int main(void)
     int sum;
     int checkDigit;
 
+    //read one digit at a time and store in unique variable
+
     printf("This programming is for checking for a missing Check Digit\nEnter the ISBN Number you want to check: \n");
 	scanf("%1d%1d%1d%1d%1d%1d%1d%1d%1d", &num1, &num2, &num3, &num4, &num5, &num6, &num7, &num8, &num9);
 	
+	//sum of products (calculation for check digit)
+
 	sum = (num1*10 + num2*9 + num3*8 + num4*7 + num5*6 + num6*5 + num7*4 + num8*3 + num9*2);
 
 	checkDigit = 11-(sum%11);
+
+	// checking final checkDigit and printing corresponding value 1-9, 0 or X)
 
 	if (checkDigit == 10)
 		printf("Check Digit: X\n");
