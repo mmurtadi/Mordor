@@ -12,14 +12,14 @@ int main(void)
 	int i = 5;
 	int j = 3;
 
-	printf("2a: %d %d\n\n", i / j, i % j);
+	printf("%d %d\n", i / j, i % j);
 
 	// Question 2b)
 	
 	i = 2;
 	j = 3;
 
-	printf("2b: %d\n\n", (i + 10) % j);
+	printf("%d\n", (i + 10) % j);
 
 	// Question 2c)
 	
@@ -28,7 +28,7 @@ int main(void)
 
 	int k = 9;
 
-	printf("2c: %d\n\n", (i + 10) % k / j);
+	printf("%d\n", (i + 10) % k / j);
 
 	// Question 2d)
 
@@ -36,7 +36,7 @@ int main(void)
 	j = 2;
 	k = 3;
 
-	printf("2d: %d\n\n", (i + 5) % (j + 2) / k);
+	printf("%d\n", (i + 5) % (j + 2) / k);
 
 
 	return 0;
