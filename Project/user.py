@@ -12,7 +12,7 @@ class User:
         self.movies = []
 
     def __repr__(self):
-        return "<User {}>".format(self.name)
+        return '<User {}>'.format(self.name)
 
     def add_movie(self, name, mtype, genre):
         movie = Movie(name, mtype, genre, False)

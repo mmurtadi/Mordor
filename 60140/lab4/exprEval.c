@@ -32,6 +32,9 @@ int main(void)
 		result = num1*num2;
 		printf("Answer!!! pew pew... Daily Double!...\njk, answer is %.2f\n", result);
 	}
+	else  
+		printf("Unknown operator!\n");
+	
 
 	return 0;
 }
