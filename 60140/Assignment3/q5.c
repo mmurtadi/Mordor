@@ -8,24 +8,25 @@ int main()
 {
     int n, i;
     float f = 1;
-    float e = 1;
+    float e;
 
     // ask user for  input
     printf("Enter an integer: ");
     scanf("%d",&n);
 
-    // check for 0 or impossible factorial input
+    // check for 0 or as eulers number starts at x=0;
+
     if (n < 0)
-        printf("impossible, try again");
+        printf("impossible, e starts at 0 try again");
 
     else
     {
         for(i=1; i<=n; ++i)
         {
-            f *= i;
-            e = e+f;              
+            f = f * i;
+            e = (e + i/f);              
         }
-        printf("e of %d = %.2f\n ", n, e);
+        printf("e of %d = %f\n ", n, e);
     }
 
     return 0;
