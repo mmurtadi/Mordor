@@ -1,3 +1,7 @@
+# Author: Moe Murtadi
+# Fall 2016
+# Menu File, media list and tracking program, building functionality as i go
+
 import os
 import json
 
@@ -13,25 +17,29 @@ def menu():
     else:
         user = User(name)
 
-    user_input = input('**********************************************'
-                       '\nEnter \'a\' to add a movie '
-                       '\nEnter \'ls\' to list movies'
-                       '\nEnter \'w\' to mark movie as watched'
-                       '\nEnter \'d to delete a movie'
-                       '\nEnter \'l to see the list of watched movies'
+    user_input = input('****************************************************'
+                       '\nEnter \'a\' if you would like to add media to the DB'
+                       '\nEnter \'ls\' to list media'
+                       '\nEnter \'w\' to mark media as watched/played'
+                       '\nEnter \'d\' to delete an item'
+                       '\nEnter \'l\' to see the list of watched/played media'
                        '\nEnter \'s\' to save'
                        '\nEnter \'q\' quit'
-                       '\n**********************************************'
+                       '\n****************************************************'
                        '\nSelection:\n')
 
     while user_input!= 'q':
         if user_input == 'a':
-            movie_name = input('enter the movie name: ')
+            movie_mtype = input('is this a movie or video game: ')
+            if movie_mtype == 'game':
+              movie_name = input('enter the game name: ')
+            else:
+              movie_name = input('enter the movie : ')
             movie_genre = input('enter the movie genre: ')
-            user.add_movie(movie_name, movie_genre)
+            user.add_movie(movie_name, movie_mtype, movie_genre)
         elif user_input == 'ls':
             for movie in user.movies:
-                print('Name: {} Genre: {} Watched: {}'.format(movie.name, movie.genre, movie.watched))
+                print('Name: {} Type: {} Genre: {} Watched: {}'.format(movie.name, movie_mtype, movie.genre, movie.watched))
         elif user_input == 'w':
             movie_name = input('Enter the movie name to set as watched: ')
             user.set_watched(movie_name)
@@ -40,17 +48,17 @@ def menu():
             user.delete_movie(movie_name)
         elif user_input == 'l':
             for movie in user.watched_movies():
-                print('Name: {} Genre: {} Watched: {}'.format(movie.name, movie.genre, movie.watched))
+                print('Name: {} Type: {} Genre: {} Watched: {}'.format(movie.name, movie.mtype, movie.genre, movie.watched))
         elif user_input == 's':
             with open(filename, 'w') as f:
                 json.dump(user.json(), f)
 
         user_input = input('**********************************************'
-                           '\nEnter \'a\' to add a movie '
-                           '\nEnter \'ls\' to list movies'
-                           '\nEnter \'w\' to mark movie as watched'
-                           '\nEnter \'d to delete a movie'
-                           '\nEnter \'l to see the list of watched movies'
+                           '\nEnter \'a\' to add media '
+                           '\nEnter \'ls\' to list media'
+                           '\nEnter \'w\' to mark media as watched/played'
+                           '\nEnter \'d to delete an item'
+                           '\nEnter \'l to see the list of watched/played media'
                            '\nEnter \'s\' to save'
                            '\nEnter \'q\' quit'
                            '\n**********************************************'

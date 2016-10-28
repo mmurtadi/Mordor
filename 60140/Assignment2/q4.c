@@ -13,7 +13,7 @@ int main(void)
 	int j = 4;
 	int k = 5;
 
-	printf("4a)\n%d\n", i < j || ++j < k);
+	printf("%d ", i < j || ++j < k);
 	printf("%d %d %d\n", i, j, k);
 
 	// Question 4b)
@@ -22,7 +22,7 @@ int main(void)
 	j = 8;
 	k = 9;
 
-	printf("4b)\n%d\n", i - 7 && j++ < k);
+	printf("%d ", i - 7 && j++ < k);
 	printf("%d %d %d\n", i, j, k);
 
 
@@ -32,7 +32,7 @@ int main(void)
 	j = 8;
 	k = 9;
 
-	printf("4c)\n%d \n", (i = j) || (j = k));
+	printf("%d ", (i = j) || (j = k));
 	printf("%d %d %d\n", i, j, k);
 
 
@@ -42,7 +42,7 @@ int main(void)
 	j = 1;
 	k = 1;
 
-	printf("4d)\n%d \n", ++i || ++j && ++k);
+	printf("%d ", ++i || ++j && ++k);
 	printf("%d %d %d\n", i, j, k);
 
 

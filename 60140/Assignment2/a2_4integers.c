@@ -9,22 +9,16 @@ int main(void)
 {
 	int num1, num2, num3, num4;
 
-	int large = 0, small = 999999999999999;
+	// Enter 4 seperate integers
+	printf("Enter four integers seperated by a space: ");
+	scanf("%d %d %d %d", &num1, &num2, &num3, &num4);
 
-	printf("Enter your 1st digit: ");
-	scanf("%d", &num1);
-	printf("Enter your 2nd digit: ");
-	scanf("%d", &num2);
-	printf("Enter your 3rd digit: ");
-	scanf("%d", &num3);
-	printf("Enter your 4th digit: ");
-	scanf("%d", &num4);
+	// Assigning largest and smallest to num1 to save if statements
+	int large = num1;
+	int small = num1;
 
-	//checking for largest and smallest and placing in variable
-
-	if (num1 > large){
-		large = num1;
-	}	
+	// Checking each input to see if they are larger or smaller than
+	// (large) and (small)
 	if (num2 > large){
 		large = num2;
 	}
@@ -34,23 +28,18 @@ int main(void)
 	if (num4 > large){
 		large = num4;
 	}
-	
-
-	if (num1 < small){
-		small = num1;
-	}
 	if (num2 < small){
 		small = num2;
 	}
 	if (num3 < small){
 		small = num3;
 	}
-
 	if (num4 < small){
 		small = num4;
 	}
-	
-	printf("Largest: %d\nSmallest: %d", large, small);
+
+	// Once the checks are complete, prints out largest and smalles integers to user.
+	printf("Largest: %d\nSmallest: %d\n", large, small);
 
 	return 0;
 }
