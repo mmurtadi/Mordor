@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b5160d3-1464-45e1-b0b0-456fe75f0df9" name="Default" comment="" />
+    <list default="true" id="7b5160d3-1464-45e1-b0b0-456fe75f0df9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../60140/Assignment 1/a1my_prog" afterPath="$PROJECT_DIR$/../60140/Assignment 1/a1my_prog" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../60140/lab3/workingrapdeleteeverythingelseExcept leading zero fix.rap" afterPath="$PROJECT_DIR$/../60140/lab3/workingrapdeleteeverythingelseExcept leading zero fix.rap" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../60140/old labs/modmy_prog" afterPath="$PROJECT_DIR$/../60140/old labs/modmy_prog" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../60140/old labs/swapmy_prog" afterPath="$PROJECT_DIR$/../60140/old labs/swapmy_prog" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../60140/Assignment2/2a.c" afterPath="$PROJECT_DIR$/../60140/Assignment2/2a.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../60140/Assignment2/a2_4integers.c" afterPath="$PROJECT_DIR$/../60140/Assignment2/a2_4integers.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../60140/Assignment2/a2_addfrac.c" afterPath="$PROJECT_DIR$/../60140/Assignment2/a2_addfrac.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../60140/Assignment2/a2_octal.c" afterPath="$PROJECT_DIR$/../60140/Assignment2/a2_octal.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../60140/Assignment2/q2.c" afterPath="$PROJECT_DIR$/../60140/Assignment2/q2.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../60140/Assignment2/q4.c" afterPath="$PROJECT_DIR$/../60140/Assignment2/q4.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lottery.py" afterPath="$PROJECT_DIR$/../Lottery.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Project.iml" afterPath="$PROJECT_DIR$/.idea/Project.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Jim.txt" afterPath="$PROJECT_DIR$/Jim.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Moe" afterPath="$PROJECT_DIR$/Moe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Moe.txt" afterPath="$PROJECT_DIR$/Moe.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/movie.py" afterPath="$PROJECT_DIR$/movie.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myfile.txt" afterPath="$PROJECT_DIR$/myfile.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user.py" afterPath="$PROJECT_DIR$/user.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../python/.idea/misc.xml" afterPath="$PROJECT_DIR$/../python/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../python/.idea/modules.xml" afterPath="$PROJECT_DIR$/../python/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../python/.idea/untitled.iml" afterPath="$PROJECT_DIR$/../python/.idea/untitled.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../python/.idea/vcs.xml" afterPath="$PROJECT_DIR$/../python/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../python/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../python/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../python/app.py" afterPath="$PROJECT_DIR$/../python/app.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../python/app_OOP.py" afterPath="$PROJECT_DIR$/../python/app_OOP.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" />
+    </list>
     <ignored path="Project.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +65,7 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
+            <state relative-caret-position="620">
               <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -128,7 +160,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -149,7 +181,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -354,7 +386,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947807" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32977587" sideWeight="0.15762004" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32977587" sideWeight="0.15762004" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -392,6 +424,48 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/movie.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myfile.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Moe">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/movie.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -655,7 +729,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
+        <state relative-caret-position="620">
           <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
