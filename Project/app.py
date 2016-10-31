@@ -1,7 +1,6 @@
 # Author: Moe Murtadi
 # Fall 2016
-# Menu File, Movie list and tracking program
-
+# Menu File, media list and tracking program, building functionality as i go
 
 import os
 import json
