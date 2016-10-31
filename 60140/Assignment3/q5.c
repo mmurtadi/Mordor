@@ -26,7 +26,7 @@ int main()
             f = f * i;
             e = (e + i/f);              
         }
-        printf("e of %d = %f\n ", n, e);
+        printf("e at %d = %f\n ", n, e);
     }
 
     return 0;
