@@ -21,7 +21,7 @@ int main()
 
     else
     {
-        for(i=1; i<=n; ++i)
+        for (i=1; i<=n; ++i)
         {
             f = f * i;
             e = (e + i/f);              

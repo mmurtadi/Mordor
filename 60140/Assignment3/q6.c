@@ -29,9 +29,9 @@ int main()
         fact = fact * i;
         term = i / fact;
     }
-    
+
     // Print out  once exiting the while loop
-    printf("Approximation of e: %.2f\n", eps);
+    printf("Approximation of e: %.4f\n", eps);
 
     return 0;
 }

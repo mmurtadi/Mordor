@@ -16,24 +16,37 @@ int main(void)
 	scanf("%f%c%f", &num1, &op, &num2);
 	
 
- 
-	if (op == '+') {
+ // Addition
+	if (op == '+') { 
 		result = num1+num2;
-		printf("Answer!!! pew pew... Daily Double!...\njk, answer is %.2f\n", result);
+		printf("Answer is: %.2f\n", result);
 	}
-	else if (op == '/') {
+
+ // Check for 0 operator, divide 2 numbers
+	else if (op == '/') { 
 		if (num2 == 0) 
 			printf("0 is undefined, please try again\n");
 		else
 			result = num1/num2;
-			printf("Answer!!! pew pew... Daily Double!...\njk, answer is %.2f\n", result);
+			printf("Answer is:%.2f\n", result);
 	}
+
+ // Multiplication
 	else if (op == '*'){
 		result = num1*num2;
-		printf("Answer!!! pew pew... Daily Double!...\njk, answer is %.2f\n", result);
+		printf("Answer is: %.2f\n", result);
 	}
-	else  
+
+ // Subtraction
+	else if (op == '-'){ 
+		result = num1-num2;
+		printf("Answer is: %.2f\n", result);
+	}
+	
+ // Check for unknown input
+	else  {
 		printf("Unknown operator!\n");
+	}
 	
 
 	return 0;
