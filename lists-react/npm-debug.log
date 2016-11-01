@@ -7,8 +7,8 @@
 6 silly lifecycle skeleton@1.0.0~prestart: no script for prestart, continuing
 7 info lifecycle skeleton@1.0.0~start: skeleton@1.0.0
 8 verbose lifecycle skeleton@1.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle skeleton@1.0.0~start: PATH: /usr/share/npm/bin/node-gyp-bin:/home/mmurtadi/ingred/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
-10 verbose lifecycle skeleton@1.0.0~start: CWD: /home/mmurtadi/ingred
+9 verbose lifecycle skeleton@1.0.0~start: PATH: /usr/share/npm/bin/node-gyp-bin:/home/mmurtadi/Mordor/ingred/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+10 verbose lifecycle skeleton@1.0.0~start: CWD: /home/mmurtadi/Mordor/ingred
 11 silly lifecycle skeleton@1.0.0~start: Args: [ '-c',
 11 silly lifecycle   'watchify src/main.jsx -v -t [ babelify --presets [ react ] ] -o public/js/main.js' ]
 12 info lifecycle skeleton@1.0.0~start: Failed to exec start script
@@ -20,7 +20,7 @@
 13 verbose stack     at maybeClose (internal/child_process.js:821:16)
 13 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
 14 verbose pkgid skeleton@1.0.0
-15 verbose cwd /home/mmurtadi/ingred
+15 verbose cwd /home/mmurtadi/Mordor/ingred
 16 error Linux 4.4.0-21-generic
 17 error argv "/usr/bin/nodejs" "/usr/bin/npm" "start"
 18 error node v4.2.6
