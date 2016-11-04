@@ -20885,8 +20885,8 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var ListManager = require('./components/ListManager.jsx');
 
-ReactDOM.render(React.createElement(ListManager, { title: 'Ingredients' }), document.getElementById('ingredients'));
-ReactDOM.render(React.createElement(ListManager, { title: 'Courses' }), document.getElementById('Planned'));
+ReactDOM.render(React.createElement(ListManager, { title: 'Ingredients', headingColor: '#DF013A' }), document.getElementById('ingredients'));
+ReactDOM.render(React.createElement(ListManager, { title: 'Courses', headingColor: '#FF8000' }), document.getElementById('Planned'));
 ReactDOM.render(React.createElement(ListManager, { title: 'Teams', headingColor: '#5882FA' }), document.getElementById('AFC'));
 
 },{"./components/ListManager.jsx":174,"react":171,"react-dom":28}]},{},[175]);
