@@ -7,39 +7,34 @@
 
 int main()
 {
-	int i;
-	int pin;
-	int success = 0;
-	int try = 1;
-	int collecter = 0;
-	int count = 5;
 
+	int try = 0;
+	int pinOriginal;
+	int pinCheck;
+	int counter = 1;
+	int collecter;
 
-	while (try <= 6){
-		printf("Enter a number this is attempt (%d): ", try);
-		scanf("%d", &pin);
-		if (pin >=33333 && pin <=99999){
-				do {
-					success = 0;
-					collecter = collecter+((pin/(10^count)%3));
-					count = count - 1;
-				}while ((pin/(10^count)%3) == 0 && count >= 0);
-
-
-			}else{
-				try = try +1;
-				printf("Enter a number this is attempt (%d): ", try);
-				scanf("%d", &pin);
+	do {
+		//lengthCheck
+		try += 1;
+		printf("Enter your number. attempt(%d):", try);
+		scanf("%d", &pinOriginal);
+		if (pinOriginal > 9999 && pinOriginal <100000){
+			counter = 1;
+			collecter = 0;
+			do {
+				counter = counter*10;
+				pinCheck = pinOriginal%counter;
+				collecter = collecter + (pinCheck % 3);
+			}while (collecter == 0 && counter <= 1000000);
+				if (collecter == 0){
+					printf("Success!\n");
+					return 0;
+				}
 			}
-			try = try +1;
-	}
-	if (collecter > 0 && try > 6)
-		printf("Intruder! RCMP is on route to your geotagged location\n");
-	else
-		printf("digit: %d is... a... SUCCESS!!!\n", pin);
+	}while (try < 6);
 
+	printf("Intruder");
 
-
-
-    return 0;            
+	return 0;
 }
