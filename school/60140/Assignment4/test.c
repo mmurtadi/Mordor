@@ -12,6 +12,9 @@ int main(void)
 	int x = 0;
 	int i = 0;
 
+	printf("%d//%d//%d//%d//%d\n\n\n", num, count, duplicateCheck, x, i);
+
+
 	printf("Enter the number you want to check: \t");
 	scanf("%d", &num);
 

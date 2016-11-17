@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	bool weekend[7] = {true,[6]=true};
+	bool weekend[7] = {true, false, false, false, false, false, true};
 
 	int i = 0;
 	int num1;
