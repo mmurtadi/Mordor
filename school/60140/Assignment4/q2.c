@@ -18,7 +18,7 @@ int main(void)
 	if (op == '+') { 
 		result_denom = denom1*denom2;
 		result_num = num1*denom2 +  num2*denom1;
-		printf("Answer is: %d//%d \n", result_num, result_denom);
+		printf("Answer is: %d/%d \n", result_num, result_denom);
 	}
 
  // Check for 0 operator, divide 2 numbers
@@ -28,21 +28,21 @@ int main(void)
 		else {
 			result_num = num1*denom2;
 			result_denom = denom1*num2;
-			printf("Answer is: %d//%d \n", result_num, result_denom);
+			printf("Answer is: %d/%d \n", result_num, result_denom);
 		}
 	}
  // Multiplication
 	else if (op == '*'){
 		result_num = num1*num2;
 		result_denom = denom1*denom2;
-		printf("Answer is: %d//%d \n", result_num, result_denom);	
+		printf("Answer is: %d/%d \n", result_num, result_denom);	
 	}
 
  // Subtraction
 	else if (op == '-'){ 
 		result_denom = denom1*denom2;
 		result_num = num1*denom2 - num2*denom1;
-		printf("Answer is: %d//%d \n", result_num, result_denom);	
+		printf("Answer is: %d/%d \n", result_num, result_denom);	
 	}
 	
  // Check for unknown input
@@ -50,9 +50,5 @@ int main(void)
 		printf("Unknown operator!\n");
 	}
 	
-
-	// Print results
-	printf("the sum is %d/%d\n", result_num, result_denom);
-
 	return 0;
 }

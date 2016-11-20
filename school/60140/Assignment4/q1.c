@@ -1,6 +1,5 @@
-1. 	a) legal floating point
+1. 	a) legal integer
 	b) legal floating point
-	c) legal integer
+	c) illegal  
 	d) illegal
 	e) legal floating point
-2.

@@ -8,8 +8,11 @@
 
 int main(void)
 {
+	// answer to quesiton 3
 	bool weekend[7] = {true, false, false, false, false, false, true};
+	// answer to quesiton 3
 
+	// personal check to see if it worked
 	int i = 0;
 	int num1;
 

@@ -8,8 +8,7 @@ int main(void)
 	int num = 0;
 	int duplicateCheck = 0;
 	int count = 0;
-	int splitNum[50] = {0};
-	int x = 0;
+	int splitNum[50] = {0}; // duplicate check array for number up to 50 digits long
 	int i = 0;
 
 	printf("Enter the number you want to check: \t");
@@ -22,7 +21,6 @@ int main(void)
 			// Variable resets.
 			// Useful for multiple runs of duplicate check. 
 			duplicateCheck = 0;
-			x = 0;
 			i = 0;
 			count = 0;
 
@@ -41,7 +39,6 @@ int main(void)
 			// the length of the number entered.
 			while (i < count){
 				splitNum[i] = num%10;
-				printf("%d", splitNum[i] );
 				i +=1;
 				num/= 10;
 			}
