@@ -1,56 +1,77 @@
+// readNum()to take a valid number (greater than 1) from the user. This function
+// has no input and returns a valid integer number entered by the user.
+
 #include <stdio.h>
 #include <stdbool.h>
 
 
-int readNum();
-int isPrime(int prime);
-
-void printHello();
+int readNum(); // function to read a valid number enterered by the user
+int isPrime(int num); // checks whether a number is 
+int primeBase(int num);
+int findPrimeCount(int num, int prime);
 
 
 int main(void){
-	int num;
-	bool prime;
+	int num, prime, frequency;
+	bool p_flag;
+
 	num = readNum();
-	bool p_flag = isPrime(prime);
+	printf("%d = 1", num);
+	while (num > 1) {
+		p_flag = isPrime(num);
+		if (num > 1) {
+			prime = primeBase(num);
+			frequency = findPrimeCount(num, prime);
+			// printf("%d\n%d\n%d\n", num, prime, frequency);
+			printf("x(%d^%d)", prime, frequency);
+			num /= (prime*(frequency*prime));
+		}
+	}
+	printf("\n");
 
-
-	// check printf("%d", num);
-	//findPrimeAndFillArray(int primeArray, int num);
-	//findPrime();
 	return 0;
 }
 
-
-int isPrime(int prime){
-	
-	for (int i = 2; i < num; i++) {
-		if (num%i == 0) {
-			primeFreq +=1;
-			num /= i;
-			printf("(%d^%d)x", prime, primeFreq);
-		}
-	}
-	return num;
-
-}
-
-
-/*	int primeFreq = 0;
-	if (num == 1){
-		return 1;
-	}else if (num == 2){
-		return 2;
-	}
-
-
-}
-*/
-
-
 int readNum(){
 	int num;
-	printf("Enter a valid number (>1): \t" );
-	scanf("%d", &num);
+	do {
+		printf("Enter a valid number (>1): \t" );
+		scanf("%d", &num);
+		if (num <= 1){
+			printf("number has to be greater than 1\nPlease try again!: \n");
+		}
+
+	} while (num<=1);
+
 	return num;
 }
+
+
+int isPrime(int num){
+	bool p_flag;
+	for (int i=2; i < num; i++) {
+		if (num%i == 0){
+			return 1;
+		}
+	}
+return 0;
+}
+
+int primeBase(int num){
+	for (int i=2; i < num; i++) {
+		if (num%i == 0){
+			return i;
+		}
+	}
+return num;
+}
+
+int findPrimeCount(int num, int prime){
+	int primeFreq = 0;
+	while (num%prime == 0){
+		primeFreq+=1;
+		num /= prime;
+	}
+	return primeFreq;
+}
+
