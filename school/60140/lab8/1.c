@@ -1,37 +1,41 @@
-// readNum()to take a valid number (greater than 1) from the user. This function
-// has no input and returns a valid integer number entered by the user.
-
 #include <stdio.h>
-#include <stdbool.h>
+#include <math.h>
+
+// REMINDER MUST COMPILE USING "-lm" TO USE MATH LIBRARY
 
 
 int readNum(); // function to read a valid number enterered by the user
-int isPrime(int num); // checks whether a number is 
-int primeBase(int num);
-int findPrimeCount(int num, int prime);
+int primeBase(int num); //check if number is divisible by any digit returns digit or self as prime number.
+int findPrimeCount(int num, int prime); // finds frequency prime number can divide number inputted or remainder.
 
 
 int main(void){
 	int num, prime, frequency;
-	bool p_flag;
-
+	
+	// Prompt user to enter a number greater than 1
 	num = readNum();
-	printf("%d = 1", num);
+
+	//styling as requested in the lab instructions.
+	printf("%d = 1", num); 
+
+	// Main loop checking for prime number in input
+	// dividing that number by (prime^frequency)
+	// when num = 1, we have divided the remainder by itself and loop ends
 	while (num > 1) {
-		p_flag = isPrime(num);
-		if (num > 1) {
-			prime = primeBase(num);
-			frequency = findPrimeCount(num, prime);
-			// printf("%d\n%d\n%d\n", num, prime, frequency);
-			printf("x(%d^%d)", prime, frequency);
-			num /= (prime*(frequency*prime));
-		}
+		prime = primeBase(num);
+		frequency = findPrimeCount(num, prime);
+		printf("x(%d^%d)", prime, frequency);
+		num /= pow(prime, frequency);
+		
 	}
+
+	// Styling as requested in the lab instructions.
 	printf("\n");
 
 	return 0;
 }
 
+// function to read a valid number enterered by the user
 int readNum(){
 	int num;
 	do {
@@ -46,17 +50,7 @@ int readNum(){
 	return num;
 }
 
-
-int isPrime(int num){
-	bool p_flag;
-	for (int i=2; i < num; i++) {
-		if (num%i == 0){
-			return 1;
-		}
-	}
-return 0;
-}
-
+//check if number is divisible by any digit returns digit or self as prime number.
 int primeBase(int num){
 	for (int i=2; i < num; i++) {
 		if (num%i == 0){
@@ -66,6 +60,7 @@ int primeBase(int num){
 return num;
 }
 
+// finds frequency prime number can divide number inputted or remainder.
 int findPrimeCount(int num, int prime){
 	int primeFreq = 0;
 	while (num%prime == 0){

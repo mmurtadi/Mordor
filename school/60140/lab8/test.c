@@ -1,39 +1,26 @@
-// readNum()to take a valid number (greater than 1) from the user. This function
-// has no input and returns a valid integer number entered by the user.
-
 #include <stdio.h>
-#include <stdbool.h>
+#include <math.h>
 
 
-int readNum(); // function to read a valid number enterered by the user
-int isPrime(int num); // checks whether a number is 
+int readNum(); 
 int primeBase(int num);
-int findPrimeCount(int num, int prime);
-
+int findPrimeCount(int num, int prime); 
 
 int main(void){
 	int num, prime, frequency;
-	bool p_flag;
-
+	
 	num = readNum();
-	printf("%d = 1", num);
-	while (num >= 1) {
-		p_flag = isPrime(num);
-		if (num > 1) {
-			prime = primeBase(num);
-			frequency = findPrimeCount(num, prime);
-		}
-		else if (num == 1){
-			printf("\n");
-			return 0;
-		}
-		// printf("%d\n%d\n%d\n", num, prime, frequency);
+	
+	printf("%d = 1", num); 
+	
+	while (num > 1) {
+		prime = primeBase(num);
+		frequency = findPrimeCount(num, prime);
 		printf("x(%d^%d)", prime, frequency);
-		num /= (prime*(frequency));
+		num /= pow(prime, frequency);
 		
 	}
 	printf("\n");
-
 	return 0;
 }
 
@@ -49,17 +36,6 @@ int readNum(){
 	} while (num<=1);
 
 	return num;
-}
-
-
-int isPrime(int num){
-	bool p_flag;
-	for (int i=2; i < num; i++) {
-		if (num%i == 0){
-			return 1;
-		}
-	}
-return 0;
 }
 
 int primeBase(int num){
