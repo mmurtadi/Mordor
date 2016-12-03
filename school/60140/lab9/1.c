@@ -1,21 +1,34 @@
+// Name: Mohamed Murtadi
+// Purpose: CS 60-140 Fall2016
+// lab 5
+
 #include <stdio.h>
 
+// Prompt user to enter a number greater than 0
+int readNum(); 
 
-int readNum();
+// function call to find triangular number using iterative  approach
 int iterativeTriangularNumber(int number);
-int recuriveTriangularNumber(int number);
 
+// function call to find triangular number using recursive approach
+int recursiveTriangularNumber(int number);
+
+
+//Main function
 int main(void){
 	int number, triangularNumber;
+	
 	number = readNum();
 	
 	triangularNumber = iterativeTriangularNumber(number);
 	printf("Iterative: Triangular number of %d is %d\n", number, triangularNumber);
 
-	triangularNumber = recuriveTriangularNumber(number);
+	triangularNumber = recursiveTriangularNumber(number);
 	printf("recurisive: Triangular number of %d is %d\n", number, triangularNumber);
 	return 0;
 }
+
+
 
 int readNum(){
 	int n = 0;
@@ -34,8 +47,9 @@ int iterativeTriangularNumber(int number){
 	return triangularNumber;
 }
 
-int recuriveTriangularNumber(int number){
-	if (number > 1){
-		return number + recuriveTriangularNumber(number-1);
+int recursiveTriangularNumber(int number){
+	if (number >= 1){
+		return number + recursiveTriangularNumber(number-1);
 	}
-};
+	return 0;
+}
