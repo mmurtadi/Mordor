@@ -1,0 +1,23 @@
+echo $SHELL
+echo $PATH
+uname
+whoami
+which pico
+pwd
+cat /etc/profile
+wc -l /etc/passwd
+ls
+ls -l 
+ls -l /tmp
+ls -l /
+cd ~
+cd /tmp
+mkdir 256
+cd 256
+mkdir lab1
+cd lab1
+history > lab1.txt
+touch test1.bash test2.bash
+rm test2.bash
+nedit test1.bash
+chmod 755 hello

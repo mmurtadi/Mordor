@@ -1,0 +1,4 @@
+system=60256
+echo There are many examples in system programming.
+echo $System Programming examples are designed to help students, to learn through practice.
+echo The TAs will lead the students to go through many $system programming examples.

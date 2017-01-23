@@ -1,6 +1,7 @@
 // Name: Mohamed Murtadi
 // Purpose: CS 60-141 W17
-// Assignment 1 
+// Assignment 1
+
 
 #include <stdio.h>
 #include <math.h>
@@ -17,6 +18,7 @@ int main(void){
 	int num, prime, frequency;
 	
 	// Prompt user to enter a number greater than 1
+
 	num = readNum();
 
 	//styling as requested in the lab instructions.
@@ -45,11 +47,11 @@ int readNum(){
 	do {
 		printf("Enter a valid number (>1): \t" );
 		scanf("%d", &num);
-		if (num <= 1){
+		if (num < 2 ){
 			printf("number has to be greater than 1\nPlease try again!: \n");
 		}
 
-	} while (num<=1);
+	} while (num < 2);
 
 	return num;
 }
