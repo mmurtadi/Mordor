@@ -197,13 +197,12 @@ int gcd(int num1, int num2){
 // Input: 2 valid numbers entered by the user 
 // Output: number 1 to the power of number 2
 int powerCalc(int num1, int num2){
-	int x, sum;
+	int x = num1;
 
 	for (int i = 1; i< num2; i++){
-		x = (num1*num1);
-		sum += x;
+		x *= num1;
 	}
-	printf("\nAnswer is: %d \n", sum);
+	printf("\nAnswer is: %d \n", x);
 
 
 	return 0;
