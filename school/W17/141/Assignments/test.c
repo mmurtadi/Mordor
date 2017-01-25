@@ -42,7 +42,7 @@ int main(void){
 
 	for (int j=0; j<9900; j++){
 		if ((storage[j][0]) > 0){
-			printf("*(%dx%d)\n", storage[j][0], storage[j][1]);
+			printf("*(%d^%d)", storage[j][0], storage[j][1]);
 		}
 	}
 
