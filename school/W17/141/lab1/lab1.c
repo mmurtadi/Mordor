@@ -1,10 +1,11 @@
-// Name: Mohamed Murtadi
-// Purpose: CS 60-141 W17
-// lab 1
+///////////////////////////////
+// Name: Mohamed Murtadi      /
+// Purpose: CS 60-141 W17     /
+// lab 1 practicing iteration /
+///////////////////////////////
 
 #include <stdio.h>
 #include <stdbool.h>
-#include <math.h>
 
 int summation(int x); // runs iterative summation of numbers up to n
 int factorial(int num); // Finds factorial up to that number bound by cpu bit

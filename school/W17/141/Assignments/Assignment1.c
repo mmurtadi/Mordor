@@ -15,29 +15,40 @@ int findPrimeCount(int num, int prime); // finds frequency prime number can divi
 
 
 int main(void){
-	int num, prime, frequency;
+	int num, prime, frequency, factNum, i;
+	int storage[9900][2] = {0};
 	
 	// Prompt user to enter a number greater than 1
 
-	num = readNum();
+	factNum = readNum();
+	printf("%d! = ", factNum);
 
-	//styling as requested in the lab instructions.
-	printf("%d = 1", num); 
+	do {
+		num = factNum-1;
+		num = num*factNum;
 
-	// Main loop checking for prime number in input
-	// dividing that number by (prime^frequency)
-	// when num = 1, we have divided the remainder by itself and loop ends
-	while (num > 1) {
-		prime = primeBase(num);
-		frequency = findPrimeCount(num, prime);
-		printf("x(%d^%d)", prime, frequency);
-		num /= pow(prime, frequency);
-		
+		while (num > 1){
+			prime = primeBase(num);
+			frequency = findPrimeCount(num, prime);
+			storage[prime][0] = prime;
+			storage[prime][1] += frequency;
+			// store prime number frequency
+			// printf("x(%d^%d)", prime, frequency);
+			num /= pow(prime, frequency);		
+		}
+		factNum -= 2;		
+	} while (factNum > 2);
+
+
+	for (int j=0; j<9900; j++){
+		if ((storage[j][0]) > 0){
+			printf("*(%d^%d)", storage[j][0], storage[j][1]);
+		}
 	}
 
-	// Styling as requested in the lab instructions.
-	printf("\n");
 
+	printf("\n");
+	// Styling as requested in the lab instructions.
 	return 0;
 }
 

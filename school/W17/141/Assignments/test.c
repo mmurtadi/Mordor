@@ -5,9 +5,9 @@
 
 #include <stdio.h>
 #include <math.h>
+#include <fcntl.h>
 
 // REMINDER MUST COMPILE USING "-lm" TO USE MATH LIBRARY
-
 
 int readNum(); // function to read a valid number enterered by the user
 int primeBase(int num); //check if number is divisible by any digit returns digit or self as prime number.
@@ -20,7 +20,6 @@ int main(void){
 	
 	// Prompt user to enter a number greater than 1
 
-	factNum = readNum();
 	printf("%d! = ", factNum);
 
 	do {
@@ -47,22 +46,18 @@ int main(void){
 	}
 
 
-
+	printf("\n");
 	// Styling as requested in the lab instructions.
+	fclose("input.txt");
 	return 0;
 }
 
 // function to read a valid number enterered by the user
 int readNum(){
-	int num;
-	do {
-		printf("Enter a valid number (>1): \t" );
-		scanf("%d", &num);
-		if (num < 2 ){
-			printf("number has to be greater than 1\nPlease try again!: \n");
-		}
+	int num, fopen;
+	fopen = open("input.txt", O_WRONLY | O_CREAT | O_TRUNC, 0755);
+	fscanf(fp, "%s %s %s %d", str1, str2, str3, &year);
 
-	} while (num < 2);
 
 	return num;
 }
