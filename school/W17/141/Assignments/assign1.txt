@@ -1,0 +1,118 @@
+Script started on Thu 26 Jan 2017 03:31:38 PM EST
+]0;mmurtadi@mmurtadi-ThinkPad-X230 ~/Mordor/school/W17/141/Assignments[01;32mmmurtadi@mmurtadi-ThinkPad-X230[00m [01;34m~/Mordor/school/W17/141/Assignments $[00m exitls -la.out < inpput.txt[A]0;mmurtadi@mmurtadi-ThinkPad-X230 ~/Mordor/school/W17/141/Assignments[01;32mmmurtadi@mmurtadi-ThinkPad-X230[00m [01;34m~/Mordor/school/W17/141/Assignments $[00m gcc assign1.c -lm[A]0;mmurtadi@mmurtadi-ThinkPad-X230 ~/Mordor/school/W17/141/Assignments[01;32mmmurtadi@mmurtadi-ThinkPad-X230[00m [01;34m~/Mordor/school/W17/141/Assignments $[00m cat input.t[4Pxt[A]0;mmurtadi@mmurtadi-ThinkPad-X230 ~/Mordor/school/W17/141/Assignments[01;32mmmurtadi@mmurtadi-ThinkPad-X230[00m [01;34m~/Mordor/school/W17/141/Assignments $[00m [C[C[C[Cassign1.c
+// Name: Mohamed Murtadi
+// Purpose: CS 60-141 W17
+// Assignment 1
+
+#include <stdio.h>
+#include <math.h>
+
+// REMINDER MUST COMPILE USING "-lm" TO USE MATH LIBRARY
+
+int readNum(int position); // function to read a valid number enterered by the user
+int primeBase(int num); //check if number is divisible by any digit returns digit or self as prime number.
+int findPrimeCount(int num, int prime); // finds frequency prime number can divide number inputted or remainder.
+
+
+int main(void){
+	int num, prime, frequency, factNum, i, position = 0;
+	int storage[9900][2] = {0};
+	
+	// Prompt user to enter a number greater than 1
+	do {
+		factNum = readNum(position);
+		printf("%d! = ", factNum);
+
+		position++;
+			// printf("\n%d\n", position );
+
+		if (factNum > 1){
+			do {
+				num = factNum-1;
+				num = num*factNum;
+				while (num > 1){
+					prime = primeBase(num);
+					frequency = findPrimeCount(num, prime);
+					storage[prime][0] = prime;
+					storage[prime][1] += frequency;
+					// store prime number frequency
+					// printf("x(%d^%d)", prime, frequency);
+					num /= pow(prime, frequency);		
+				}
+				factNum -= 2;		
+			} while (factNum > 2);
+
+			for (int j=0; j<9900; j++){
+				if ((storage[j][0]) > 0){
+					printf("(%d^%d)", storage[j][0], storage[j][1]);
+				}
+			}			
+		}
+		printf("\n\n");		
+	} while (position < 3 );
+
+	// Styling as requested in the lab instructions.
+	return 0;
+}
+
+// function to read a valid number enterered by the user
+int readNum(int position){
+	// printf("begining of readNum funciton:%d\n", position );
+
+	int inputStorage[4] = {0};
+	FILE* inputFile = fopen("input.txt", "r");
+	fscanf(inputFile, "%d%d%d%d", &inputStorage[0], &inputStorage[1], &inputStorage[2], &inputStorage[3]);
+	fclose(inputFile);
+	// printf("\nBefore return in read num function: %d\n", position );
+
+	return inputStorage[position];
+}
+
+//check if number is divisible by any digit returns digit or self as prime number.
+int primeBase(int num){
+	for (int i=2; i < num; i++) {
+		if (num%i == 0){
+			return i;
+		}
+	}
+return num;
+}
+
+// finds frequency prime number can divide number inputted or remainder.
+int findPrimeCount(int num, int prime){
+	int primeFreq = 0;
+	while (num%prime == 0){
+		primeFreq+=1;
+		num /= prime;
+	}
+	return primeFreq;
+}
+
+]0;mmurtadi@mmurtadi-ThinkPad-X230 ~/Mordor/school/W17/141/Assignments[01;32mmmurtadi@mmurtadi-ThinkPad-X230[00m [01;34m~/Mordor/school/W17/141/Assignments $[00m cat assign11.c[A]0;mmurtadi@mmurtadi-ThinkPad-X230 ~/Mordor/school/W17/141/Assignments[01;32mmmurtadi@mmurtadi-ThinkPad-X230[00m [01;34m~/Mordor/school/W17/141/Assignments $[00m [6Pexit
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -la.out < inpput.txt[A]0;mmurtadi@mmurtadi-ThinkPad-X230 ~/Mordor/school/W17/141/Assignments[01;32mmmurtadi@mmurtadi-ThinkPad-X230[00m [01;34m~/Mordor/school/W17/141/Assignments $[00m gcc assign1.c -lm[A]0;mmurtadi@mmurtadi-ThinkPad-X230 ~/Mordor/school/W17/141/Assignments[01;32mmmurtadi@mmurtadi-ThinkPad-X230[00m [01;34m~/Mordor/school/W17/141/Assignments $[00m cat input.t[4Pxt
+5
+53
+100
+0]0;mmurtadi@mmurtadi-ThinkPad-X230 ~/Mordor/school/W17/141/Assignments[01;32mmmurtadi@mmurtadi-ThinkPad-X230[00m [01;34m~/Mordor/school/W17/141/Assignments $[00m cat input.ttxt[A]0;mmurtadi@mmurtadi-ThinkPad-X230 ~/Mordor/school/W17/141/Assignments[01;32mmmurtadi@mmurtadi-ThinkPad-X230[00m [01;34m~/Mordor/school/W17/141/Assignments $[00m [C[C[C[Cassign1.c[A]0;mmurtadi@mmurtadi-ThinkPad-X230 ~/Mordor/school/W17/141/Assignments[01;32mmmurtadi@mmurtadi-ThinkPad-X230[00m [01;34m~/Mordor/school/W17/141/Assignments $[00m [6Pexit
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -la.out < inpput.txt[A]0;mmurtadi@mmurtadi-ThinkPad-X230 ~/Mordor/school/W17/141/Assignments[01;32mmmurtadi@mmurtadi-ThinkPad-X230[00m [01;34m~/Mordor/school/W17/141/Assignments $[00m gcc assign1.c -lm
+]0;mmurtadi@mmurtadi-ThinkPad-X230 ~/Mordor/school/W17/141/Assignments[01;32mmmurtadi@mmurtadi-ThinkPad-X230[00m [01;34m~/Mordor/school/W17/141/Assignments $[00m gcc assign11.c -lm[A]0;mmurtadi@mmurtadi-ThinkPad-X230 ~/Mordor/school/W17/141/Assignments[01;32mmmurtadi@mmurtadi-ThinkPad-X230[00m [01;34m~/Mordor/school/W17/141/Assignments $[00m cat input.t[4Pxt[A]0;mmurtadi@mmurtadi-ThinkPad-X230 ~/Mordor/school/W17/141/Assignments[01;32mmmurtadi@mmurtadi-ThinkPad-X230[00m [01;34m~/Mordor/school/W17/141/Assignments $[00m [C[C[C[Cassign1.c[A]0;mmurtadi@mmurtadi-ThinkPad-X230 ~/Mordor/school/W17/141/Assignments[01;32mmmurtadi@mmurtadi-ThinkPad-X230[00m [01;34m~/Mordor/school/W17/141/Assignments $[00m [6Pexit
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -la.out < inpput.txt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.a.out < input.txt[A]0;mmurtadi@mmurtadi-ThinkPad-X230 ~/Mordor/school/W17/141/Assignments[01;32mmmurtadi@mmurtadi-ThinkPad-X230[00m [01;34m~/Mordor/school/W17/141/Assignments $[00m [C/a.out < input.txt[A]0;mmurtadi@mmurtadi-ThinkPad-X230 ~/Mordor/school/W17/141/Assignments[01;32mmmurtadi@mmurtadi-ThinkPad-X230[00m [01;34m~/Mordor/school/W17/141/Assignments $[00m [C[C.a.out < input.txt[A]0;mmurtadi@mmurtadi-ThinkPad-X230 ~/Mordor/school/W17/141/Assignments[01;32mmmurtadi@mmurtadi-ThinkPad-X230[00m [01;34m~/Mordor/school/W17/141/Assignments $[00m [C[C[Ca.out < i[1Pnput.txt[A]0;mmurtadi@mmurtadi-ThinkPad-X230 ~/Mordor/school/W17/141/Assignments[01;32mmmurtadi@mmurtadi-ThinkPad-X230[00m [01;34m~/Mordor/school/W17/141/Assignments $[00m [C[C
+
+5! = (2^3)(3^1)(5^1)
+
+53! = (2^52)(3^24)(5^13)(7^8)(11^4)(13^4)(17^3)(19^2)(23^2)(29^1)(31^1)(37^1)(41^1)(43^1)(47^1)(53^1)
+
+100! = (2^148)(3^72)(5^37)(7^24)(11^13)(13^11)(17^8)(19^7)(23^6)(29^4)(31^4)(37^3)(41^3)(43^3)(47^3)(53^2)(59^1)(61^1)(67^1)(71^1)(73^1)(79^1)(83^1)(89^1)(97^1)
+
+]0;mmurtadi@mmurtadi-ThinkPad-X230 ~/Mordor/school/W17/141/Assignments[01;32mmmurtadi@mmurtadi-ThinkPad-X230[00m [01;34m~/Mordor/school/W17/141/Assignments $[00m ls -l
+total 164
+-rwxr-xr-x 1 mmurtadi mmurtadi   9088 Jan 26 15:31 [0m[01;32ma.out[0m
+-rw-r--r-- 1 mmurtadi mmurtadi   2243 Jan 26 15:25 assign1.c
+-rw-r--r-- 1 mmurtadi mmurtadi   4096 Jan 26 15:31 assign1.txt
+-rw-r--r-- 1 mmurtadi mmurtadi     10 Jan 25 17:59 input.txt
+-rw-r--r-- 1 mmurtadi mmurtadi 137662 Jan 17 15:48 pdfAssignment1.pdf
+-rw-r--r-- 1 mmurtadi mmurtadi   2243 Jan 26 15:25 test.c
+]0;mmurtadi@mmurtadi-ThinkPad-X230 ~/Mordor/school/W17/141/Assignments[01;32mmmurtadi@mmurtadi-ThinkPad-X230[00m [01;34m~/Mordor/school/W17/141/Assignments $[00m exit
+exit
+
+Script done on Thu 26 Jan 2017 03:32:27 PM EST
