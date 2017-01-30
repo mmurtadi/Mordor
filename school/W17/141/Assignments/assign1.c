@@ -19,7 +19,7 @@ int main(void){
 	// Prompt user to enter a number greater than 1
 	do {
 		factNum = readNum(position);
-		printf("%d! = ", factNum);
+		printf("%-3d! = ", factNum);
 
 		position++;
 			// printf("\n%d\n", position );
