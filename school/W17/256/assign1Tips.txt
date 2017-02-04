@@ -1,0 +1,9 @@
+change from text to binary
+
+read and translate into ascii
+
+255 = ffff
+
+char buf
+
+read(fd, &buf) // will read ascii code of txt file.

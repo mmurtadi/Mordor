@@ -1,18 +1,18 @@
 import javax.swing.JOptionPane;
 
-public class Main {
+public class Q2 {
 
     public static void main(String[] args) {
 
         int average, i = 0;
         String name, studentID;
         //explicit declarations of arrays to be used to store variables
-
         int[] grade = {0,0,0,0,0};
         String[] g = {"0","0","0","0","0"};
         int[] letterGrade = {0,0,0,0,0,0,0,0,0,0,0,0,0};
         String[] letter = {"A+","A","A-","B+","B","B-","C+","C","C-","D+","D","D-","F"};
 
+        // UI Prompts
         name = JOptionPane.showInputDialog("Enter your Name: ");
         studentID = JOptionPane.showInputDialog("Enter your student Number: ");
 
@@ -25,9 +25,11 @@ public class Main {
             grade[i] = Integer.parseInt(g[i]);
             i++;
         }
+
+        // While loop cycling through grades entered and incrementing occurrence in letter grade array;
+        // Followed grading scheme as per Uwindsor
         i = 0;
         while (i < 5){
-            // repeating for grade[i],grade[i],grade[i],grade[i]
             if ((grade[i] <= 100 && grade[i] >=90)){
                 letterGrade[0]++;
             }
@@ -73,7 +75,10 @@ public class Main {
             i++;
         }
 
+        // Average calculation without using api function
         average = (grade[0] + grade[1] + grade[2] + grade[3] + grade[4])/5;
+
+        //counter reset and command line print out of letter grades that had an occurrence
         i = 0;
         while (i < 13){
             if (letterGrade[i] > 0){
@@ -81,6 +86,8 @@ public class Main {
             }
             i++;
         }
+
+        // Prompt with results
         JOptionPane.showMessageDialog(null, "Student Name: " + name +
                 "\nStudent Id: " + studentID +
                 "\nGrade 1: " + g[0] +

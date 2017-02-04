@@ -2,9 +2,10 @@
  * Created by mmurtadi on 23/01/17.
  */
 
-public class triangle {
+public class Q3triangle {
 
     public static void main( String args[] ){
+        // nested for loops calculating every possible hypotenuse for a triangle up to 500
         int side1, side2;
         double hyp;
         for (side1 = 1; side1 <=353; side1++){
