@@ -25,7 +25,8 @@ int main(void){
     srand(time(NULL));
 
     
-do {
+do { {  // UI for user to select an option or "0" to exit
+
         printf("\n\nPlease choose one of the following options:\n1. Fill Array:\n2. Search Array\n3. Left Shift\n4. Print Array:\n0. EXIT\nEnter Your selection here: \n\n");
         scanf("%d", &selection);
 
@@ -63,9 +64,9 @@ do {
 	return 0;
 }
 
-// Objective: Runs iterative summation of numbers up to n
-// Input: number entered by the user 
-// Output: Summation of numbers up to N
+// Objective: generates 2D Array to be used for the program
+// Input: reference to initialized array 
+// Output: population of array with no return value
 int populateRandom2D(int randomNumberLocation[][N]){
 
 	int value, successCounter = 0;
@@ -90,8 +91,8 @@ int populateRandom2D(int randomNumberLocation[][N]){
 }
 
 // Objective: Runs iterative summation of numbers up to n
-// Input: number entered by the user 
-// Output: Summation of numbers up to N
+// Input: value to check for duplicate and reference to array
+// Output: returns boolean whether value exists
 bool linearSearch2D(int value, int randomNumberLocation[][N]){
 	int test = 0;
     for (int i = 0; i < M; i++){
@@ -105,8 +106,8 @@ bool linearSearch2D(int value, int randomNumberLocation[][N]){
 }
 
 // Objective: Runs iterative summation of numbers up to n
-// Input: number entered by the user 
-// Output: Summation of numbers up to N
+// Input: reference to array
+// Output: swap numbers left one position.
 int leftShift2D(int randomNumberLocation[][N]){
     int tempFirst = randomNumberLocation[0][0];
     int tempNewline;
@@ -129,8 +130,8 @@ int leftShift2D(int randomNumberLocation[][N]){
 }
 
 // Objective: Runs iterative summation of numbers up to n
-// Input: number entered by the user 
-// Output: Summation of numbers up to N
+// Input: reference to array
+// Output: pretty display of array 
 int printArray2D (int randomNumberLocation[][N]){
     printf("\nline 1: %d %d %d %d %d \n", randomNumberLocation[0][0], randomNumberLocation[0][1], randomNumberLocation[0][2], randomNumberLocation[0][3], randomNumberLocation[0][4]);
     printf("line 2: %d %d %d %d %d \n", randomNumberLocation[1][0], randomNumberLocation[1][1], randomNumberLocation[1][2], randomNumberLocation[1][3], randomNumberLocation[1][4]);
