@@ -21,13 +21,12 @@ int leftShift2D(int randomNumberLocation[][N]); //
 
 
 int main(void){
-	// printf("%d%d\n", M, N );
 	int num, check = 0, selection, randomNumberLocation[M][N] = {0};
     srand(time(NULL));
 
     
 do {
-        printf("Please choose one of the following options:\n1. Fill Array:\n2. Search Array\n3. Left Shift\n4. Print Array:\n0. EXIT\nEnter Your selection here: ");
+        printf("\n\nPlease choose one of the following options:\n1. Fill Array:\n2. Search Array\n3. Left Shift\n4. Print Array:\n0. EXIT\nEnter Your selection here: \n\n");
         scanf("%d", &selection);
 
         if (selection == 1){
@@ -35,14 +34,14 @@ do {
 
         }
         else if( selection == 2){
-            printf("What number do you want to check?\n");
+            printf("What number do you want to check?\n\n");
             scanf("%d", &num);
             check = linearSearch2D(num, randomNumberLocation);
             if (check){
-                printf("Yes the number exists in the array\n");
+                printf("\n\nYes the number exists in the array\n\n");
             }
             else{
-                printf("No it does not exist\n");
+                printf("\n\nNo it does not exist\n");
             }
         }
         else if (selection == 3){
@@ -54,7 +53,7 @@ do {
         else if (selection == 0){
         }
         else{
-            printf("Uh-oh, wrong number, try again!\n");
+            printf("\nUh-oh, wrong number, try again!\n");
         }
     
 
@@ -63,6 +62,10 @@ do {
 
 	return 0;
 }
+
+// Objective: Runs iterative summation of numbers up to n
+// Input: number entered by the user 
+// Output: Summation of numbers up to N
 int populateRandom2D(int randomNumberLocation[][N]){
 
 	int value, successCounter = 0;
@@ -86,6 +89,9 @@ int populateRandom2D(int randomNumberLocation[][N]){
     return 0;
 }
 
+// Objective: Runs iterative summation of numbers up to n
+// Input: number entered by the user 
+// Output: Summation of numbers up to N
 bool linearSearch2D(int value, int randomNumberLocation[][N]){
 	int test = 0;
     for (int i = 0; i < M; i++){
@@ -97,6 +103,10 @@ bool linearSearch2D(int value, int randomNumberLocation[][N]){
     }
     return 0;
 }
+
+// Objective: Runs iterative summation of numbers up to n
+// Input: number entered by the user 
+// Output: Summation of numbers up to N
 int leftShift2D(int randomNumberLocation[][N]){
     int tempFirst = randomNumberLocation[0][0];
     int tempNewline;
@@ -118,8 +128,11 @@ int leftShift2D(int randomNumberLocation[][N]){
     }
 }
 
+// Objective: Runs iterative summation of numbers up to n
+// Input: number entered by the user 
+// Output: Summation of numbers up to N
 int printArray2D (int randomNumberLocation[][N]){
-    printf("line 1: %d %d %d %d %d \n", randomNumberLocation[0][0], randomNumberLocation[0][1], randomNumberLocation[0][2], randomNumberLocation[0][3], randomNumberLocation[0][4]);
+    printf("\nline 1: %d %d %d %d %d \n", randomNumberLocation[0][0], randomNumberLocation[0][1], randomNumberLocation[0][2], randomNumberLocation[0][3], randomNumberLocation[0][4]);
     printf("line 2: %d %d %d %d %d \n", randomNumberLocation[1][0], randomNumberLocation[1][1], randomNumberLocation[1][2], randomNumberLocation[1][3], randomNumberLocation[1][4]);
     printf("line 3: %d %d %d %d %d \n", randomNumberLocation[2][0], randomNumberLocation[2][1], randomNumberLocation[2][2], randomNumberLocation[2][3], randomNumberLocation[2][4]);
     printf("line 4: %d %d %d %d %d \n", randomNumberLocation[3][0], randomNumberLocation[3][1], randomNumberLocation[3][2], randomNumberLocation[3][3], randomNumberLocation[3][4]);
