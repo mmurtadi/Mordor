@@ -64,7 +64,7 @@ do { {  // UI for user to select an option or "0" to exit
 	return 0;
 }
 
-// Objective: generates 2D Array to be used for the program
+// Objective: populates array with unique values
 // Input: reference to initialized array 
 // Output: population of array with no return value
 int populateRandom2D(int randomNumberLocation[][N]){
@@ -90,7 +90,7 @@ int populateRandom2D(int randomNumberLocation[][N]){
     return 0;
 }
 
-// Objective: Runs iterative summation of numbers up to n
+// Objective: searches for existence of a value in passed in array
 // Input: value to check for duplicate and reference to array
 // Output: returns boolean whether value exists
 bool linearSearch2D(int value, int randomNumberLocation[][N]){
@@ -105,7 +105,7 @@ bool linearSearch2D(int value, int randomNumberLocation[][N]){
     return 0;
 }
 
-// Objective: Runs iterative summation of numbers up to n
+// Objective: Rswap each number one position to the left
 // Input: reference to array
 // Output: swap numbers left one position.
 int leftShift2D(int randomNumberLocation[][N]){
@@ -129,7 +129,7 @@ int leftShift2D(int randomNumberLocation[][N]){
     }
 }
 
-// Objective: Runs iterative summation of numbers up to n
+// Objective: Prints values of array
 // Input: reference to array
 // Output: pretty display of array 
 int printArray2D (int randomNumberLocation[][N]){
