@@ -2,7 +2,6 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-
 int main(){
 	int fd;
 	char s[255] = "101   GM\tBuick\t2010\n102   Ford\tLincoln\t2005";

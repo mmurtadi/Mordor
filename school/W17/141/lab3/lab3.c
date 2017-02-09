@@ -1,7 +1,7 @@
 ///////////////////////////////
 // Name: Mohamed Murtadi      /
 // Purpose: CS 60-141 W17     /
-// lab 3 2D             /
+// lab 3 2D                   /
 ///////////////////////////////
 
 
@@ -14,10 +14,10 @@
 #define N 5
 
 
-int printArray2D(int randomNumberLocation[][N]); // 
-int populateRandom2D(int randomNumberLocation[][N]); // 
-bool linearSearch2D(int value, int randomNumberLocation[][N]); //  
-int leftShift2D(int randomNumberLocation[][N]); // 
+int printArray2D(int randomNumberLocation[][N]); // Objective: Prints values of array
+int populateRandom2D(int randomNumberLocation[][N]); // Objective: populates array with unique values 
+bool linearSearch2D(int value, int randomNumberLocation[][N]); // Objective: searches for existence of a value in passed in array 
+int leftShift2D(int randomNumberLocation[][N]); // Objective: Swap each number one position to the left 
 
 
 int main(void){
@@ -25,7 +25,7 @@ int main(void){
     srand(time(NULL));
 
     
-do { {  // UI for user to select an option or "0" to exit
+do {  // UI for user to select an option or "0" to exit
 
         printf("\n\nPlease choose one of the following options:\n1. Fill Array:\n2. Search Array\n3. Left Shift\n4. Print Array:\n0. EXIT\nEnter Your selection here: \n\n");
         scanf("%d", &selection);
@@ -34,7 +34,7 @@ do { {  // UI for user to select an option or "0" to exit
             populateRandom2D(randomNumberLocation);
 
         }
-        else if( selection == 2){
+        else if( selection == 2){ // UI for number check feature
             printf("What number do you want to check?\n\n");
             scanf("%d", &num);
             check = linearSearch2D(num, randomNumberLocation);
@@ -45,10 +45,10 @@ do { {  // UI for user to select an option or "0" to exit
                 printf("\n\nNo it does not exist\n");
             }
         }
-        else if (selection == 3){
+        else if (selection == 3){ // Left shift call
             leftShift2D(randomNumberLocation);
         }
-        else if (selection == 4){
+        else if (selection == 4){ // Print call
             printArray2D(randomNumberLocation);
         }
         else if (selection == 0){
@@ -58,7 +58,7 @@ do { {  // UI for user to select an option or "0" to exit
         }
     
 
-    } while (selection != 0);
+    }while(selection != 0);
 
 
 	return 0;
@@ -85,7 +85,7 @@ int populateRandom2D(int randomNumberLocation[][N]){
                 }
     		}
     	}
-    } while (successCounter < (M*N));
+    }while (successCounter < (M*N));
 
     return 0;
 }
@@ -105,7 +105,7 @@ bool linearSearch2D(int value, int randomNumberLocation[][N]){
     return 0;
 }
 
-// Objective: Rswap each number one position to the left
+// Objective: Swap each number one position to the left
 // Input: reference to array
 // Output: swap numbers left one position.
 int leftShift2D(int randomNumberLocation[][N]){
@@ -142,5 +142,3 @@ int printArray2D (int randomNumberLocation[][N]){
     
     return 0;
 }
-
-
