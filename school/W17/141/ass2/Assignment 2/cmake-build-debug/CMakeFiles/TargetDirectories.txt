@@ -1,3 +1,0 @@
-/cygdrive/c/Mordor/school/W17/141/ass2/Assignment 2/cmake-build-debug/CMakeFiles/edit_cache.dir
-/cygdrive/c/Mordor/school/W17/141/ass2/Assignment 2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/cygdrive/c/Mordor/school/W17/141/ass2/Assignment 2/cmake-build-debug/CMakeFiles/Assignment_2.dir
