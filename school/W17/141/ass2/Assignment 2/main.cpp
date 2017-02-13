@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-int findStart();
+int findStart(char maze[][12]);
 void mazeTraverse(char maze);
 void printMaze();
 int validMove(int current, char maze[][12]);
@@ -15,10 +15,11 @@ int coordsAreEdge(char maze[][12]);
 
 
 int main(void){
-    char end = '0';
-    int start = findStart(), current = start;
-
-	char maze[12][12] = {{'1','1','1','1','1','1','1','1','1','1','1','1'},
+    // position facing N,E,S,W == 0,1,2,3.
+    // if at position 0 == facing north, right arm facing east.
+    // start facing east, arm on south position.
+    int position = 1;
+    char maze[12][12] = {{'1','1','1','1','1','1','1','1','1','1','1','1'},
 						{'1','0','0','0','1','0','0','0','0','0','0','1'},
 						{'0','0','1','0','1','0','1','1','1','1','0','1'},
 						{'1','1','1','0','1','0','0','0','0','1','0','1'},
@@ -30,13 +31,10 @@ int main(void){
 						{'1','1','1','1','1','1','0','1','1','1','0','1'},
 						{'1','0','0','0','0','0','0','1','0','0','0','1'},
 						{'1','1','1','1','1','1','1','1','1','1','1','1'}};
-
-    do {
-        current = validMove(current, maze);
-        mazeTraverse();
+    int start = findStart(maze), current;
+    printf("%d", start);
 
 
-    } while (end != 'x' && start == 'x');
 
 	return 0;
 }
@@ -47,6 +45,7 @@ int findStart(char maze[][12]){
             return i;
         }
     }
+    return 0;
 }
 
 void mazeTravers(char maze){

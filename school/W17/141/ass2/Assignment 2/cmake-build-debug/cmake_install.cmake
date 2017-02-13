@@ -1,4 +1,4 @@
-# Install script for directory: /cygdrive/c/Users/Moe/ClionProjects/Assignment 2
+# Install script for directory: /cygdrive/c/Mordor/school/W17/141/ass2/Assignment 2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/cygdrive/c/Users/Moe/ClionProjects/Assignment 2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/cygdrive/c/Mordor/school/W17/141/ass2/Assignment 2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
