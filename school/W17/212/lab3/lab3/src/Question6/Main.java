@@ -7,12 +7,18 @@ public class Main {
     public static void main(String[] args) {
         int guess = 0, play = 1, goal;
 
-        // checks input and prints out a hint: "too low" or "too high"
-        // then gives user another try and displays which attempt they are on:
+        /**
+         * generates random number
+         */
         goal = randomNumberGenerator();
-
+        /**
+         * takes in user's first guess
+         */
         guess = Integer.parseInt(JOptionPane.showInputDialog(null, "Pick a number: \n"));
 
+        /**
+         * loops and prints hints until user guesses correcly.
+         */
         do {
             if (guess < goal) {
                 JOptionPane.showMessageDialog(null, "Too Low!, try again!\n");
@@ -24,6 +30,10 @@ public class Main {
             guess = Integer.parseInt(JOptionPane.showInputDialog(null, "Pick a number: \n"));
 
             if (guess == goal) {
+                /**
+                 * UI for play again
+                 * if so, a new random number will be generated and used
+                 */
                 do {
                     play = Integer.parseInt(JOptionPane.showInputDialog(null, "Woohoo! you got it! the number was %d\n Wanna play again?\n1. Play Again\n2. Close Game\n"));
                     goal = randomNumberGenerator();
@@ -37,7 +47,6 @@ public class Main {
 
     }
     private static int randomNumberGenerator(){
-
         return (int)(Math.random()*((10 - 1 + 1)) + 1);
     }
 }

@@ -2,44 +2,64 @@ package Question1;
 
 /**
  * Created by mmurtadi on 07/02/17.
+ * Date functions
  */
 public class Date {
-
     private int monthDate;
     private int dayDate;
     private int yearDate;
 
-    public void Date (int month, int day, int year){
+    public void setFullDate (int month, int day, int year){
         monthDate = month;
         dayDate = day;
         yearDate = year;
     }
-    public void setMonthDate(int month){
+    /**
+     * sets month in object
+     */
+
+    public void setMonth(int month){
         monthDate = month;
     }
 
+    /**
+     * return month from object
+     */
     public int getMonth(){
 
         return monthDate;
     }
-    public void setDayDate(int day){
+    /**
+     * sets day in object
+     */
+    public void setDay(int day){
 
         dayDate = day;
     }
-
+    /**
+     * return day from object
+     */
     public int getDay(){
 
         return dayDate;
     }
-    public void setYearDate(int year){
+    /**
+     * sets year in object
+     */
+    public void setYear(int year){
 
         yearDate = year;
     }
-
+    /**
+     * return year from object
+     */
     public int getYear(){
 
         return yearDate;
     }
+    /**
+     * returns date formatted as string
+     */
     public String toString() {
         String monthString, dayString, yearString, dateFormatted;
         switch (monthDate) {
@@ -64,16 +84,18 @@ public class Date {
 
         return dateFormatted;
     }
+    /**
+     * compares values in 2 objects and returns boolean whether passed
+     * in parameter is less than current object.
+     */
     public Boolean LessThan(Date d) {
-        if (getYear() > d.yearDate){
+        if (getYear() < d.getYear())
             return true;
-        }
-        else if (getMonth() > d.monthDate){
+        else if (getYear() == d.getYear() && getMonth() < d.getMonth())
             return true;
-        }
-        else if (getDay() > d.dayDate) {
+        else if (getYear() == d.getYear() && getMonth() == d.getMonth() && getDay() < d.getDay())
             return true;
-        }
+
         return false;
     }
 

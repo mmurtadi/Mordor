@@ -50,11 +50,11 @@ int main(void){
         direction = validMove(current, direction, maze);
 
         // print out for manual input to see path of maze
-        // printf("Press any key to continue\n");
-        // getchar();
-        // printf("\n\n%d\n\n",direction);
-		// printMaze(maze);
-        // printf("\n\n%d\n\n",direction);
+        printf("Press any key to continue\n");
+        getchar();
+        printf("\n\n%d\n\n",direction);
+		printMaze(maze);
+        printf("\n\n%d\n\n",direction);
 
     } while (maze[end][11] != 'x');
     printMaze(maze);
